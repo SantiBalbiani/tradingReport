@@ -4,7 +4,7 @@ import LineGraph from './components/LineGraph';
 import React  from "react";
 import {ImArrowDown} from 'react-icons/im';
 import {Link} from 'react-scroll';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   
@@ -27,22 +27,25 @@ class App extends React.Component {
   render(){
 
   return (
-    <div className="App">
-      <section className="container">
-      <header className="App-header">
+    <div className="container">
+       
+       <div className="App-header">
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Welcome to the TradingBot Lo' Muchacho'
-        </p><Link  to="myChart" spy={true} smooth={true}><ImArrowDown  /></Link>
-        
-      </header>
-     
-          <div className="row">
-            <div className="col-12">
+        </p>
+        <Link  to="myChart" spy={true} smooth={true}><ImArrowDown  /></Link>
+        </div>
+      </div>
+      </div>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center">
               <LineGraph key={Math.random()} param = {this.state.id_graphic} months = {this.state.value} label= {this.state.label} typeGr = {this.state.isTypeLine} info= {this.state.info} />
-          </div>
-          </div>
-          </section>
+              </div>
+              </div> 
+         
     </div>
   );
 }}

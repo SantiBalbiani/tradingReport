@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
  import {Chart} from "chart.js"; 
-import classes from "./styles/LineGraph.module.css"; 
+/* import classes from "./styles/LineGraph.module.css";  */
 /* import API from '../config/API'; */
 import axios from 'axios';
-import { ImArrowRight } from 'react-icons/im';
 
 
 
@@ -80,6 +79,7 @@ class LineGraph extends Component {
             options: {
                 
                 responsive: true,
+                maintainAspectRatio: false,
                 
                 title: {
                     display: true,
@@ -142,9 +142,11 @@ class LineGraph extends Component {
     }
     render() {
         return (
-            <div className={classes.graphContainer}>
+            <div className="table-responsive">
                 <canvas
                     id="myChart"
+                    className="table"
+                    style={{minHeight:"350px"}} 
                     ref={this.chartRef}
 
                 />
