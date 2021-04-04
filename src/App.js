@@ -4,7 +4,7 @@ import LineGraph from './components/LineGraph';
 import React  from "react";
 import {ImArrowDown} from 'react-icons/im';
 import {Link} from 'react-scroll';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends React.Component {
   
