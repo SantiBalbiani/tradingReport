@@ -33,15 +33,24 @@ class App extends React.Component {
       <div className="row">
         <div className="col-12 d-flex justify-content-center">
         <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        </div>
+        <div className="row">
+        <div className="col-12 d-flex justify-content-center">
         <p>
           Welcome to the TradingBot Lo' Muchacho'
         </p>
+        </div>
+        </div>
+        <div className="row">
+        <div className="col-12 d-flex justify-content-center">
         <Link  to="myChart" spy={true} smooth={true}><ImArrowDown  /></Link>
         </div>
       </div>
       </div>
       <div className="row">
         <div className="col-12 d-flex justify-content-center">
+              <p className="lead text"> La EMA200 está calculada para 4 horas, toma la información de 1 año atrás. </p>
               <LineGraph key={Math.random()} param = {this.state.id_graphic} months = {this.state.value} label= {this.state.label} typeGr = {this.state.isTypeLine} info= {this.state.info} />
               </div>
               </div> 

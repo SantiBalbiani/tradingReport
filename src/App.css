@@ -17,6 +17,10 @@ body{
   background-color: #282c34;
 }
 
+.text{
+  color: greenyellow;
+}
+
 .App-header {
   
   min-height: 100vh;
